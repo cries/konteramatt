@@ -1,18 +1,20 @@
 {
   "name": "konteramatt",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Ries Christian",
+  "license": "ISC",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -38,13 +40,15 @@
     },
     "rules": {}
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "_id": "konteramatt@1.0.0",
-  "keywords": [],
-  "license": "ISC",
-  "readme": "ERROR: No README data found!"
+  "vue": {
+    "publicPath": "client",
+    "outputDir": "client",
+    "pages": {
+      "index": {
+        "entry": "src/main.js",
+        "template": "src/index.html",
+        "filename": "index.html"
+      }
+    }
+  }
 }
