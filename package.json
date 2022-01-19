@@ -5,7 +5,7 @@
   "author": "Ries Christian",
   "license": "ISC",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 3000",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,9 @@
     "core-js": "^3.6.5",
     "express": "^4.17.2",
     "socket.io": "^4.4.1",
-    "vue": "^2.6.11"
+    "socket.io-client": "^4.4.1",
+    "vue": "^2.6.11",
+    "vue-socket.io": "^3.0.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

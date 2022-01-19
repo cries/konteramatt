@@ -12,3 +12,9 @@ app.use('/client', express.static(__dirname + '/client'));
 server.listen(port);
 
 console.log('============= Server started ===============');
+
+let io = require('socket.io')(server, {});
+
+io.sockets.on('connection', (socket) => {
+    console.log('Socket connection');
+});
