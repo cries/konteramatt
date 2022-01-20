@@ -17,4 +17,9 @@ let io = require('socket.io')(server, {});
 
 io.sockets.on('connection', (socket) => {
     console.log('Socket connection');
+
+    socket.on('create', (room) => {
+        console.log('Join room: ' + room + ' socketId: ' + socket.id);
+        socket.join(room);
+    })
 });
